@@ -1,11 +1,11 @@
 // Praktikum EL3111 Arsitektur Sistem Komputer
 // Modul : 1
-// Percobaan : NA
-// Tanggal : 9 September 2014
-// Kelompok : NA
-// Rombongan : NA
-// Nama (NIM) 1 : Bagus Hanindhito(13211007)
-// Nama (NIM) 2 : Baharuddin Aziz (13211133)
+// Percobaan : TP
+// Tanggal : 23 September 2022
+// Kelompok : 10
+// Rombongan : B
+// Nama (NIM) 1 : Ahmad Aziz (13220034)
+// Nama (NIM) 2 : Gilbert Ng (13220032)
 // Nama File : sumofsquare.c
 // Deskripsi : Demonstrasi procedure call dan stack
 // Menghitung jumlah dari kuadrat bilangan
