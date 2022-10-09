@@ -11,10 +11,10 @@
 
 void coba(int* x, int* y, int* z){
     // Kamus
-    int a;
-    int b;
-    int c;
-    int d;
+    double a;
+    double b;
+    double c;
+    double d;
     // Algoritma
     a = *x;
     b = *y;
