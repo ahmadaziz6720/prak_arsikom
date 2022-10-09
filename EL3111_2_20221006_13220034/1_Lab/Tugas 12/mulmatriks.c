@@ -7,7 +7,7 @@
 // Nama (NIM) 1 : Gilbert Ng (13220032)
 // Nama (NIM) 2 : Ahmad Aziz (13220034)
 // Nama File : mulmatriks.c
-// Deskripsi : program perkalian matriks
+// Deskripsi : program perkalian 2 matriks 
 
 #include <stdlib.h>
 #include <stdio.h>
