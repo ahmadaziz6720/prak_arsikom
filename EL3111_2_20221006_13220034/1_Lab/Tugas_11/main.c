@@ -3,23 +3,26 @@
 
 int main() {
     char *nama_orang[100];
+
+    char **ptrArr = nama_orang;
+    char temp[100];
     int i = 0;
 
-    printf("Masukkan nama orang: ");   
+    printf("Masukkan nama orang: ");
     while (1) {
-        scanf("%c", &nama_orang[i]);
-        if (strcmp(nama_orang[i], ".") == 0) {
+        scanf("%s", &temp);
+        if (strcmp(temp, ".") == 0) {
             break;
         } else {
+            ptrArr[i] = strdup(temp);
             i++;
         }
     }
-
+    
     printf("Nama orang yang dimasukkan: \n");
-    while(i >= 0) {
-        printf("%s ", nama_orang[i]);
-        i--;
-    }  
+    for(int j = 0; j < i; j++) {
+        printf("%s \n", ptrArr[j]);
+    }
 
     return 0;
 }
