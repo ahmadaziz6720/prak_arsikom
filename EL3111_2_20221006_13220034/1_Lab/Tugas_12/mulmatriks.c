@@ -1,6 +1,6 @@
 // Praktikum EL3111 Arsitektur Sistem Komputer
 // Modul : 2
-// Percobaan : 0
+// Percobaan : 12
 // Tanggal : 6 Oktober 2022
 // Kelompok : 10
 // Rombongan : B
