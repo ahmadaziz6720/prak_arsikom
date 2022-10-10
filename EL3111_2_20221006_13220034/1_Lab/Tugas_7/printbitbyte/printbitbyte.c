@@ -32,7 +32,7 @@ void printBit(size_t const size, void const * const address){
             byte >>= j;
             printf("%u", byte);
             space++;
-            if (space>=4) {
+            if (space>=8) {
                 printf(" ");
                 space=0;
             }
