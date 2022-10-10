@@ -15,15 +15,15 @@
 int main(){
     int result;
     result = shiftRegister(0x04);
-    printf("y = ");
+    printf("shiftRegister(0x04) [byte] = 0x"); 
     printByte((byte_pointer) &result, sizeof(int));
-    printf("y = ");
+    printf("shiftRegister(0x04) [bit ] =");
     printBit(sizeof(int), &result);
 
     result = shiftRegister(0x13);
-    printf("y = ");
+    printf("shiftRegister(0x13) [byte] = 0x");
     printByte((byte_pointer) &result, sizeof(int));
-    printf("y = ");
+    printf("shiftRegister(0x13) [bit ] =");
     printBit(sizeof(int), &result);
     return 0;
 }

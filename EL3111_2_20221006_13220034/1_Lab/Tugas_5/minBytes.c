@@ -11,8 +11,8 @@
 
 #include "minBytes.h"
 
+// subraction of two integers two's complement only using operator + and ~
 int minBytes(int x, int y) {
-    int z = x + ~y + 1;
-    int mask = z >> 31;
-    return (x & mask) | (y & ~mask);
+    int result = x + (~y + 1);
+    return result;
 }

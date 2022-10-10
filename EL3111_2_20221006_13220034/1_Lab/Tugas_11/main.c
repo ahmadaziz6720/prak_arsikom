@@ -19,10 +19,10 @@ int main() {
     char temp[100];
     int i = 0;
 
-    printf("Masukkan nama orang: ");
+    printf("Masukkan nama orang: \n");
     while (1) {
-        scanf("%s", &temp);
-        if (strcmp(temp, ".") == 0) {
+        fgets(temp, 100, stdin);
+        if (strcmp(temp, ".\n") == 0) {
             break;
         } else {
             ptrArr[i] = strdup(temp);
@@ -30,9 +30,9 @@ int main() {
         }
     }
     
-    printf("Nama orang yang dimasukkan: \n");
+    printf("\nNama orang yang dimasukkan: \n");
     for(int j = 0; j < i; j++) {
-        printf("%s \n", ptrArr[j]);
+        printf("%s", ptrArr[j]);
     }
     return 0;
 }

@@ -42,15 +42,13 @@ int main(){
     int valid;
     if (row1 == col2){
         valid = 1;
-    }
-    else {
+    } else {
         valid = 0;
     }
 
     if (!valid){
         printf("\nPerkalian matriks tidak dapat dilakukan.");
-    }
-    else{
+    } else{
         int matrixA[row1][col1], matrixB[row2][col2];
         //input matriks
         printf("\n");

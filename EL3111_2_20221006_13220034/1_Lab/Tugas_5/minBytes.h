@@ -10,5 +10,5 @@
 // Deskripsi : minBytes
 
 #include <stdio.h>
-
+// subraction of two integers two's complement
 int minBytes (int x, int y);

@@ -16,19 +16,19 @@ int main() {
      char nama_orang[100][100];
      int i = 0;
 
-     printf("Masukkan nama orang: ");
+     printf("Masukkan nama orang (selesai masukkan titik) : \n");
      while (1) {
-          scanf("%s", &nama_orang[i]);
-          if (strcmp(nama_orang[i], ".") == 0) {
+          fgets(nama_orang[i], 100, stdin);
+          if (strcmp(nama_orang[i], ".\n") == 0) {
                break;
           } else {
                i++;
           }
      }
-     printf("Nama orang yang dimasukkan: \n");
 
+     printf("\nNama orang yang dimasukkan: \n");
      for (int j = 0; j < i; j++) {
-          printf("%s\n", nama_orang[j]);
+          printf("%s", nama_orang[j]);
      }
 
      return 0;

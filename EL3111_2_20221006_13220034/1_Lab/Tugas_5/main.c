@@ -19,5 +19,5 @@ int main(){
     printf("Masukkan y: ");
     scanf("%x", &y);
     int z = minBytes(x, y);
-    printf("Hasil minBytes(x, y) = %x\n", z);
+    printf("Hasil minBytes(x, y) = 0x%x\n", z);
 }
