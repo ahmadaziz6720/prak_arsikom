@@ -30,6 +30,5 @@ int main() {
      for (int j = 0; j < i; j++) {
           printf("%s", nama_orang[j]);
      }
-
      return 0;
 }

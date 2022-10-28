@@ -13,8 +13,6 @@
 #include "printbitbyte/printbitbyte.h"
 #include "shiftRegister/shiftRegister.h"
 
-//encrypt every 8 bit of the input using the encryptor
 int encrypt (int x, short encryptor);
 
-//decrypt every 8 bit of the input using the encryptor
 int decrypt (int x, short encryptor);

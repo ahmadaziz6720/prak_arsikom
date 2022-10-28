@@ -11,7 +11,6 @@
 
 #include "minBytes.h"
 
-// subraction of two integers two's complement only using operator + and ~
 int minBytes(int x, int y) {
     int result = x + (~y + 1);
     return result;
