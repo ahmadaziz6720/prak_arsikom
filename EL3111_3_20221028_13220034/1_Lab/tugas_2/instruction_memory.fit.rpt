@@ -1,5 +1,5 @@
 Fitter report for instruction_memory
-Fri Oct 28 15:01:16 2022
+Tue Nov 01 10:52:03 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Fri Oct 28 15:01:16 2022        ;
+; Fitter Status                      ; Successful - Tue Nov 01 10:52:03 2022        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; instruction_memory                           ;
 ; Top-level Entity Name              ; instruction_memory                           ;
@@ -1241,7 +1241,7 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
 ; |instruction_memory                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0            ; 0       ; 0         ; 41   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |instruction_memory                                                               ; work         ;
 ;    |altsyncram:altsyncram_component|  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |instruction_memory|altsyncram:altsyncram_component                               ;              ;
-;       |altsyncram_0bo:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |instruction_memory|altsyncram:altsyncram_component|altsyncram_0bo:auto_generated ; work         ;
+;       |altsyncram_0bo:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |instruction_memory|altsyncram:altsyncram_component|altsyncram_0bo:auto_generated ;              ;
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1618,7 +1618,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Oct 28 15:01:01 2022
+    Info: Processing started: Tue Nov 01 10:51:50 2022
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off instruction_memory -c instruction_memory
 Info: Selected device EP3C120F780C7 for design "instruction_memory"
 Info: Core supply voltage is 1.2V
@@ -1714,7 +1714,7 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  57 pins available
         Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:02
+Info: Fitter preparation operations ending: elapsed time is 00:00:01
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -1731,8 +1731,8 @@ Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 408 megabytes
-    Info: Processing ended: Fri Oct 28 15:01:16 2022
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Processing ended: Tue Nov 01 10:52:03 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:14
 
 

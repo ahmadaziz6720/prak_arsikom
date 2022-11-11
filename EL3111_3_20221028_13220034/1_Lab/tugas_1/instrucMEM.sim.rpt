@@ -1,5 +1,5 @@
 Simulator report for instrucMEM
-Fri Oct 28 14:35:57 2022
+Fri Oct 28 12:23:41 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
 ; Simulation Netlist Size     ; 5462 nodes   ;
-; Simulation Coverage         ;      66.72 % ;
-; Total Number of Transitions ; 131001       ;
+; Simulation Coverage         ;      66.73 % ;
+; Total Number of Transitions ; 131003       ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone III  ;
 +-----------------------------+--------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 ; Preserve fewer signal transitions to reduce memory requirements                            ; On             ; On            ;
 ; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE     ; INPUT_EDGE    ;
 ; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off            ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off            ;               ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On             ;               ;
 ; Perform Glitch Filtering in Timing Simulation                                              ; Auto           ; Auto          ;
 ; Interconnect Delay Model Type                                                              ; Transport      ; Transport     ;
 ; Cell Delay Model Type                                                                      ; Transport      ; Transport     ;
@@ -96,13 +96,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      66.72 % ;
+; Total coverage as a percentage                      ;      66.73 % ;
 ; Total nodes checked                                 ; 5462         ;
 ; Total output ports checked                          ; 5435         ;
-; Total output ports with complete 1/0-value coverage ; 3626         ;
-; Total output ports with no 1/0-value coverage       ; 1809         ;
-; Total output ports with no 1-value coverage         ; 1809         ;
-; Total output ports with no 0-value coverage         ; 1809         ;
+; Total output ports with complete 1/0-value coverage ; 3627         ;
+; Total output ports with no 1/0-value coverage       ; 1808         ;
+; Total output ports with no 1-value coverage         ; 1808         ;
+; Total output ports with no 0-value coverage         ; 1808         ;
 +-----------------------------------------------------+--------------+
 
 
@@ -145,6 +145,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |instrucMEM|ADDR[3]                                               ; |instrucMEM|ADDR[3]                                               ; out              ;
 ; |instrucMEM|ADDR[4]                                               ; |instrucMEM|ADDR[4]                                               ; out              ;
 ; |instrucMEM|clock                                                 ; |instrucMEM|clock                                                 ; out              ;
+; |instrucMEM|reset                                                 ; |instrucMEM|reset                                                 ; out              ;
 ; |instrucMEM|INSTR[0]                                              ; |instrucMEM|INSTR[0]                                              ; pin_out          ;
 ; |instrucMEM|INSTR[1]                                              ; |instrucMEM|INSTR[1]                                              ; pin_out          ;
 ; |instrucMEM|INSTR[2]                                              ; |instrucMEM|INSTR[2]                                              ; pin_out          ;
@@ -3752,7 +3753,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |instrucMEM|INSTR[24]~reg0                                        ; |instrucMEM|INSTR[24]~reg0                                        ; regout           ;
 ; |instrucMEM|INSTR[20]~reg0                                        ; |instrucMEM|INSTR[20]~reg0                                        ; regout           ;
 ; |instrucMEM|INSTR[19]~reg0                                        ; |instrucMEM|INSTR[19]~reg0                                        ; regout           ;
-; |instrucMEM|reset                                                 ; |instrucMEM|reset                                                 ; out              ;
 ; |instrucMEM|INSTR[19]                                             ; |instrucMEM|INSTR[19]                                             ; pin_out          ;
 ; |instrucMEM|INSTR[20]                                             ; |instrucMEM|INSTR[20]                                             ; pin_out          ;
 ; |instrucMEM|INSTR[24]                                             ; |instrucMEM|INSTR[24]                                             ; pin_out          ;
@@ -5570,7 +5570,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |instrucMEM|INSTR[24]~reg0                                        ; |instrucMEM|INSTR[24]~reg0                                        ; regout           ;
 ; |instrucMEM|INSTR[20]~reg0                                        ; |instrucMEM|INSTR[20]~reg0                                        ; regout           ;
 ; |instrucMEM|INSTR[19]~reg0                                        ; |instrucMEM|INSTR[19]~reg0                                        ; regout           ;
-; |instrucMEM|reset                                                 ; |instrucMEM|reset                                                 ; out              ;
 ; |instrucMEM|INSTR[19]                                             ; |instrucMEM|INSTR[19]                                             ; pin_out          ;
 ; |instrucMEM|INSTR[20]                                             ; |instrucMEM|INSTR[20]                                             ; pin_out          ;
 ; |instrucMEM|INSTR[24]                                             ; |instrucMEM|INSTR[24]                                             ; pin_out          ;
@@ -7390,17 +7389,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Oct 28 14:35:56 2022
+    Info: Processing started: Fri Oct 28 12:23:40 2022
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off instrucMEM -c instrucMEM
-Info: Using vector source file "C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_3_20221028_13220034/1_Lab/tugas_1/instrucMEM.vwf"
+Info: Using vector source file "D:/Kuliah/Sem 5/EL3111 Praktikum Arsitektur Sistem Komputer/EL3111_3_20221027_13220032/1_Lab/Tugas 1/instrucMEM.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of instrucMEM.vwf called instrucMEM.sim_ori.vwf has been created in the db folder
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      66.72 %
-Info: Number of transitions in simulation is 131001
+Info: Simulation coverage is      66.73 %
+Info: Number of transitions in simulation is 131003
+Info: Vector file instrucMEM.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 163 megabytes
-    Info: Processing ended: Fri Oct 28 14:35:57 2022
+    Info: Peak virtual memory: 160 megabytes
+    Info: Processing ended: Fri Oct 28 12:23:41 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

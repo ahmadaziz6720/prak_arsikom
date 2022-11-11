@@ -1,3 +1,13 @@
+-- Praktikum EL3111 Arsitektur Sistem Komputer
+-- Modul : 4
+-- Percobaan : 1
+-- Tanggal : 28 Oktober 2022
+-- Kelompok : 10
+-- Rombongan : B
+-- Nama (NIM) 1 : Gilbert Ng (13220032)
+-- Nama (NIM) 2 : Ahmad Aziz (13220034)
+-- Nama File : data_memory.vhd
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
@@ -5,27 +15,28 @@ USE altera_mf.all;
 
 ENTITY data_memory IS
 	PORT (
-		ADDR : IN STD_LOGIC_VECTOR (7 DOWNTO 0); -- alamat 
-		WR_EN : IN STD_LOGIC; --Indikator Penulisan
-		RD_EN : IN STD_LOGIC; --Indikator Pembacaan
-		clock : IN STD_LOGIC := '1'; -- clock
-		RD_Data : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-		WR_Data : IN STD_LOGIC_VECTOR (7 DOWNTO 0)
-	);
+			ADDR : IN STD_LOGIC_VECTOR (7 DOWNTO 0); -- alamat 
+			WR_EN : IN STD_LOGIC; --Indikator Penulisan
+			RD_EN : IN STD_LOGIC; --Indikator Pembacaan
+			clock : IN STD_LOGIC := '1'; -- clock
+			RD_Data : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+			WR_Data : IN STD_LOGIC_VECTOR (7 DOWNTO 0)
+		);
 END ENTITY;
 
-ARCHITECTURE structural OF data_memory IS
+ARCHITECTURE structural of data_memory IS
 
 COMPONENT altsyncram 
 -- komponen memori
-	GENERIC
+GENERIC
 	(
 		init_file : STRING; -- name of the .mif file
 		operation_mode : STRING; -- the operation mode
 		widthad_a : NATURAL; -- width of address_a[]
 		width_a : NATURAL -- width of data_a[] 
 	);
-	PORT
+	
+PORT
 	(
 		wren_a : IN STD_LOGIC; -- Write Enable Activation
 		rden_a : IN STD_LOGIC; -- Read Enable Activation
@@ -37,7 +48,6 @@ COMPONENT altsyncram
 END COMPONENT;
 
 BEGIN
-
 altsyncram_component : altsyncram
 	GENERIC MAP
 	(
@@ -48,12 +58,11 @@ altsyncram_component : altsyncram
 	)
 	PORT MAP
 	(
-		wren_a => WR_EN, -- isi yang sesuai
-		rden_a => RD_EN, -- isi yang sesuai
+		wren_a => WR_EN,
+		rden_a => RD_EN,
 		clock0 => clock,
 		address_a => ADDR,
-		q_a => RD_Data, -- isi yang sesuai
+		q_a => RD_Data,
 		data_a => WR_Data
 	);
-
 END structural;

@@ -1,7 +1,7 @@
 Quartus II
 Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-12
-1086
+10
+891
 OFF
 OFF
 OFF
@@ -20,6 +20,109 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
+altsyncram_51r
+# storage
+db|data_memory.(2).cnf
+db|data_memory.(2).cnf
+# case_insensitive
+# source_file
+db|altsyncram_51r.tdf
+649a63e9d17b895f68b58c7af9b8ebc2
+7
+# used_port {
+wren_a
+-1
+3
+rden_a
+-1
+3
+q_a7
+-1
+3
+q_a6
+-1
+3
+q_a5
+-1
+3
+q_a4
+-1
+3
+q_a3
+-1
+3
+q_a2
+-1
+3
+q_a1
+-1
+3
+q_a0
+-1
+3
+data_a7
+-1
+3
+data_a6
+-1
+3
+data_a5
+-1
+3
+data_a4
+-1
+3
+data_a3
+-1
+3
+data_a2
+-1
+3
+data_a1
+-1
+3
+data_a0
+-1
+3
+clock0
+-1
+3
+address_a7
+-1
+3
+address_a6
+-1
+3
+address_a5
+-1
+3
+address_a4
+-1
+3
+address_a3
+-1
+3
+address_a2
+-1
+3
+address_a1
+-1
+3
+address_a0
+-1
+3
+}
+# memory_file {
+dmemory.mif
+66a85c183175e3ab2b1b59faa1dbd8
+}
+# hierarchies {
+altsyncram:altsyncram_component|altsyncram_51r:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
 data_memory
 # storage
 db|data_memory.(0).cnf
@@ -31,7 +134,7 @@ ON
 # case_insensitive
 # source_file
 data_memory.vhd
-132c1b1ed6a5b16bcc1c9ee13fe3ed8
+a053c6e25265725367833d7c1e645f3
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -256,11 +359,11 @@ FALSE
 PARAMETER_UNKNOWN
 DEF
 DEVICE_FAMILY
-Cyclone IV E
+Cyclone III
 PARAMETER_UNKNOWN
 USR
 CBXI_PARAMETER
-altsyncram_e2r
+altsyncram_51r
 PARAMETER_UNKNOWN
 USR
 }
@@ -349,109 +452,6 @@ address_a0
 }
 # hierarchies {
 altsyncram:altsyncram_component
-}
-# macro_sequence
-
-# end
-# entity
-altsyncram_e2r
-# storage
-db|data_memory.(2).cnf
-db|data_memory.(2).cnf
-# case_insensitive
-# source_file
-db|altsyncram_e2r.tdf
-158547c169a31ed4b8c874ec78c684
-7
-# used_port {
-wren_a
--1
-3
-rden_a
--1
-3
-q_a7
--1
-3
-q_a6
--1
-3
-q_a5
--1
-3
-q_a4
--1
-3
-q_a3
--1
-3
-q_a2
--1
-3
-q_a1
--1
-3
-q_a0
--1
-3
-data_a7
--1
-3
-data_a6
--1
-3
-data_a5
--1
-3
-data_a4
--1
-3
-data_a3
--1
-3
-data_a2
--1
-3
-data_a1
--1
-3
-data_a0
--1
-3
-clock0
--1
-3
-address_a7
--1
-3
-address_a6
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-dmemory.mif
-0
-}
-# hierarchies {
-altsyncram:altsyncram_component|altsyncram_e2r:auto_generated
 }
 # macro_sequence
 
