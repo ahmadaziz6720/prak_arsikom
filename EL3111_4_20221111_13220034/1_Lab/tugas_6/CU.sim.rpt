@@ -1,0 +1,202 @@
+Simulator report for CU
+Tue Nov 15 06:06:18 2022
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 35 nodes     ;
+; Simulation Coverage         ;      71.43 % ;
+; Total Number of Transitions ; 100          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Timing        ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; CU_timing.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      71.43 % ;
+; Total nodes checked                                 ; 35           ;
+; Total output ports checked                          ; 35           ;
+; Total output ports with complete 1/0-value coverage ; 25           ;
+; Total output ports with no 1/0-value coverage       ; 2            ;
+; Total output ports with no 1-value coverage         ; 9            ;
+; Total output ports with no 0-value coverage         ; 3            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                  ;
++------------------+------------------------+------------------+
+; Node Name        ; Output Port Name       ; Output Port Type ;
++------------------+------------------------+------------------+
+; |cu|Mux2~0       ; |cu|Mux2~0             ; combout          ;
+; |cu|Mux3~0       ; |cu|Mux3~0             ; combout          ;
+; |cu|Equal0~0     ; |cu|Equal0~0           ; combout          ;
+; |cu|Mux4~0       ; |cu|Mux4~0             ; combout          ;
+; |cu|Mux5~0       ; |cu|Mux5~0             ; combout          ;
+; |cu|Mux6~0       ; |cu|Mux6~0             ; combout          ;
+; |cu|Mux7~0       ; |cu|Mux7~0             ; combout          ;
+; |cu|OUT_sig~2    ; |cu|OUT_sig~2          ; combout          ;
+; |cu|Mux8~0       ; |cu|Mux8~0             ; combout          ;
+; |cu|OUT_sig~3    ; |cu|OUT_sig~3          ; combout          ;
+; |cu|Sig_Jmp      ; |cu|Sig_Jmp            ; padio            ;
+; |cu|Sig_Bne      ; |cu|Sig_Bne            ; padio            ;
+; |cu|Sig_Branch   ; |cu|Sig_Branch         ; padio            ;
+; |cu|Sig_MemtoReg ; |cu|Sig_MemtoReg       ; padio            ;
+; |cu|Sig_MemRead  ; |cu|Sig_MemRead        ; padio            ;
+; |cu|Sig_MemWrite ; |cu|Sig_MemWrite       ; padio            ;
+; |cu|Sig_RegWrite ; |cu|Sig_RegWrite       ; padio            ;
+; |cu|Sig_ALUSrc   ; |cu|Sig_ALUSrc         ; padio            ;
+; |cu|Sig_ALUCtrl  ; |cu|Sig_ALUCtrl        ; padio            ;
+; |cu|OP_In[1]     ; |cu|OP_In[1]~corein    ; combout          ;
+; |cu|OP_In[2]     ; |cu|OP_In[2]~corein    ; combout          ;
+; |cu|OP_In[3]     ; |cu|OP_In[3]~corein    ; combout          ;
+; |cu|OP_In[0]     ; |cu|OP_In[0]~corein    ; combout          ;
+; |cu|OP_In[5]     ; |cu|OP_In[5]~corein    ; combout          ;
+; |cu|FUNCT_In[1]  ; |cu|FUNCT_In[1]~corein ; combout          ;
++------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------+
+; Missing 1-Value Coverage                                       ;
++--------------------+------------------------+------------------+
+; Node Name          ; Output Port Name       ; Output Port Type ;
++--------------------+------------------------+------------------+
+; |cu|OUT_sig~1      ; |cu|OUT_sig~1          ; combout          ;
+; |cu|Sig_RegDest[0] ; |cu|Sig_RegDest[0]     ; padio            ;
+; |cu|Sig_RegDest[1] ; |cu|Sig_RegDest[1]     ; padio            ;
+; |cu|OP_In[4]       ; |cu|OP_In[4]~corein    ; combout          ;
+; |cu|FUNCT_In[5]    ; |cu|FUNCT_In[5]~corein ; combout          ;
+; |cu|FUNCT_In[4]    ; |cu|FUNCT_In[4]~corein ; combout          ;
+; |cu|FUNCT_In[3]    ; |cu|FUNCT_In[3]~corein ; combout          ;
+; |cu|FUNCT_In[0]    ; |cu|FUNCT_In[0]~corein ; combout          ;
+; |cu|FUNCT_In[2]    ; |cu|FUNCT_In[2]~corein ; combout          ;
++--------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------+
+; Missing 0-Value Coverage                                    ;
++--------------------+---------------------+------------------+
+; Node Name          ; Output Port Name    ; Output Port Type ;
++--------------------+---------------------+------------------+
+; |cu|OUT_sig~0      ; |cu|OUT_sig~0       ; combout          ;
+; |cu|Sig_RegDest[1] ; |cu|Sig_RegDest[1]  ; padio            ;
+; |cu|OP_In[4]       ; |cu|OP_In[4]~corein ; combout          ;
++--------------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Nov 15 06:06:18 2022
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off CU -c CU
+Info: Using vector source file "C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_4_20221111_13220034/1_Lab/tugas_6/CU_timing.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of CU_timing.vwf called CU.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      71.43 %
+Info: Number of transitions in simulation is 100
+Info: Vector file CU_timing.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Tue Nov 15 06:06:18 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

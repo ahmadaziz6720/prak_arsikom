@@ -1,13 +1,13 @@
 -- Praktikum EL3111 Arsitektur Sistem Komputer
--- Modul : 4
--- Percobaan : 1
--- Tanggal : 11 November 2022
--- Kelompok : 10
--- Rombongan : B
+-- Modul 		: 4
+-- Percobaan 	: 1
+-- Tanggal 		: 11 November 2022
+-- Kelompok 	: 10
+-- Rombongan 	: B
 -- Nama (NIM) 1 : Ahmad Aziz (13220034)
 -- Nama (NIM) 2 : 
--- Nama File : program_counter.vhd
--- Deskripsi : 
+-- Nama File 	: program_counter.vhd
+-- Deskripsi 	: Program Counter
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
