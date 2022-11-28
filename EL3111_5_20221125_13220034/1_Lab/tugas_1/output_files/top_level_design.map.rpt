@@ -1,0 +1,932 @@
+Analysis & Synthesis report for top_level_design
+Tue Nov 29 04:16:41 2022
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for data_memory:data_memory_1|altsyncram:altsyncram_component|altsyncram_72r:auto_generated
+ 14. Source assignments for instruction_memory:instruction_memory_1|altsyncram:altsyncram_component|altsyncram_2co:auto_generated
+ 15. Source assignments for reg_file:reg_file_1|altsyncram:mem_rtl_0|altsyncram_jfq1:auto_generated
+ 16. Parameter Settings for User Entity Instance: data_memory:data_memory_1|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: instruction_memory:instruction_memory_1|altsyncram:altsyncram_component
+ 18. Parameter Settings for Inferred Entity Instance: reg_file:reg_file_1|altsyncram:mem_rtl_0
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "mux_4to1_5bit:mux_4to1_5bit_1"
+ 21. Port Connectivity Checks: "mux_2to1_32bit:mux_2to1_32bit_5"
+ 22. Port Connectivity Checks: "mux_2to1_32bit:mux_2to1_32bit_4"
+ 23. Port Connectivity Checks: "cla_32:cla_32_2"
+ 24. Port Connectivity Checks: "cla_32:cla_32_1"
+ 25. Port Connectivity Checks: "ALU:ALU_1|cla_32:ADDER"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 29 04:16:41 2022          ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                      ; top_level_design                               ;
+; Top-level Entity Name              ; top_level_design                               ;
+; Family                             ; Cyclone 10 LP                                  ;
+; Total logic elements               ; 305                                            ;
+;     Total combinational functions  ; 305                                            ;
+;     Dedicated logic registers      ; 30                                             ;
+; Total registers                    ; 30                                             ;
+; Total pins                         ; 397                                            ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 11,264                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10CL120YF780I7G    ;                    ;
+; Top-level entity name                                            ; top_level_design   ; top_level_design   ;
+; Family name                                                      ; Cyclone 10 LP      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.02        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.2%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; top_level_design.vhd             ; yes             ; User VHDL File                         ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd   ;         ;
+; alu.vhd                          ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/alu.vhd                ;         ;
+; cla_32.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd             ;         ;
+; bus_merger.vhd                   ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/bus_merger.vhd         ;         ;
+; comparator.vhd                   ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/comparator.vhd         ;         ;
+; cu.vhd                           ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd                 ;         ;
+; data_memory.vhd                  ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/data_memory.vhd        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                         ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                   ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                 ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                                    ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                                    ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                                  ;         ;
+; db/altsyncram_72r.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/db/altsyncram_72r.tdf  ;         ;
+; dmemory.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/dmemory.mif            ;         ;
+; instruction_memory.vhd           ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd ;         ;
+; db/altsyncram_2co.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/db/altsyncram_2co.tdf  ;         ;
+; imemory.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif            ;         ;
+; lshift_26_28.vhd                 ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/lshift_26_28.vhd       ;         ;
+; lshift_32_32.vhd                 ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/lshift_32_32.vhd       ;         ;
+; mux_2to1_32bit.vhd               ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_2to1_32bit.vhd     ;         ;
+; mux_4to1_5bit.vhd                ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd      ;         ;
+; program_counter.vhd              ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/program_counter.vhd    ;         ;
+; reg_file.vhd                     ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/reg_file.vhd           ;         ;
+; sign_extender.vhd                ; yes             ; Auto-Found VHDL File                   ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/sign_extender.vhd      ;         ;
+; db/altsyncram_jfq1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/db/altsyncram_jfq1.tdf ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 305         ;
+;                                             ;             ;
+; Total combinational functions               ; 305         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 217         ;
+;     -- 3 input functions                    ; 66          ;
+;     -- <=2 input functions                  ; 22          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 305         ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 30          ;
+;     -- Dedicated logic registers            ; 30          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 397         ;
+; Total memory bits                           ; 11264       ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 102         ;
+; Total fan-out                               ; 2527        ;
+; Average fan-out                             ; 2.10        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name        ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; |top_level_design                            ; 305 (2)             ; 30 (0)                    ; 11264       ; 0            ; 0       ; 0         ; 397  ; 0            ; |top_level_design                                                                                                       ; top_level_design   ; work         ;
+;    |ALU:ALU_1|                               ; 66 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|ALU:ALU_1                                                                                             ; ALU                ; work         ;
+;       |cla_32:ADDER|                         ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|ALU:ALU_1|cla_32:ADDER                                                                                ; cla_32             ; work         ;
+;    |cla_32:cla_32_1|                         ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|cla_32:cla_32_1                                                                                       ; cla_32             ; work         ;
+;    |cla_32:cla_32_2|                         ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|cla_32:cla_32_2                                                                                       ; cla_32             ; work         ;
+;    |comparator:comparator_1|                 ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|comparator:comparator_1                                                                               ; comparator         ; work         ;
+;    |cu:cu_1|                                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|cu:cu_1                                                                                               ; cu                 ; work         ;
+;    |data_memory:data_memory_1|               ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|data_memory:data_memory_1                                                                             ; data_memory        ; work         ;
+;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|data_memory:data_memory_1|altsyncram:altsyncram_component                                             ; altsyncram         ; work         ;
+;          |altsyncram_72r:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|data_memory:data_memory_1|altsyncram:altsyncram_component|altsyncram_72r:auto_generated               ; altsyncram_72r     ; work         ;
+;    |instruction_memory:instruction_memory_1| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|instruction_memory:instruction_memory_1                                                               ; instruction_memory ; work         ;
+;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|instruction_memory:instruction_memory_1|altsyncram:altsyncram_component                               ; altsyncram         ; work         ;
+;          |altsyncram_2co:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|instruction_memory:instruction_memory_1|altsyncram:altsyncram_component|altsyncram_2co:auto_generated ; altsyncram_2co     ; work         ;
+;    |mux_2to1_32bit:mux_2to1_32bit_2|         ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|mux_2to1_32bit:mux_2to1_32bit_2                                                                       ; mux_2to1_32bit     ; work         ;
+;    |mux_2to1_32bit:mux_2to1_32bit_3|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|mux_2to1_32bit:mux_2to1_32bit_3                                                                       ; mux_2to1_32bit     ; work         ;
+;    |mux_2to1_32bit:mux_2to1_32bit_4|         ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|mux_2to1_32bit:mux_2to1_32bit_4                                                                       ; mux_2to1_32bit     ; work         ;
+;    |mux_2to1_32bit:mux_2to1_32bit_5|         ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|mux_2to1_32bit:mux_2to1_32bit_5                                                                       ; mux_2to1_32bit     ; work         ;
+;    |mux_4to1_5bit:mux_4to1_5bit_1|           ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|mux_4to1_5bit:mux_4to1_5bit_1                                                                         ; mux_4to1_5bit      ; work         ;
+;    |program_counter:program_counter_1|       ; 0 (0)               ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|program_counter:program_counter_1                                                                     ; program_counter    ; work         ;
+;    |reg_file:reg_file_1|                     ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|reg_file:reg_file_1                                                                                   ; reg_file           ; work         ;
+;       |altsyncram:mem_rtl_0|                 ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|reg_file:reg_file_1|altsyncram:mem_rtl_0                                                              ; altsyncram         ; work         ;
+;          |altsyncram_jfq1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_design|reg_file:reg_file_1|altsyncram:mem_rtl_0|altsyncram_jfq1:auto_generated                               ; altsyncram_jfq1    ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                          ;
++------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+-------------+
+; Name                                                                                                             ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF         ;
++------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+-------------+
+; data_memory:data_memory_1|altsyncram:altsyncram_component|altsyncram_72r:auto_generated|ALTSYNCRAM               ; AUTO ; Single Port    ; 256          ; 8            ; --           ; --           ; 2048 ; dmemory.mif ;
+; instruction_memory:instruction_memory_1|altsyncram:altsyncram_component|altsyncram_2co:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 256          ; 32           ; --           ; --           ; 8192 ; imemory.mif ;
+; reg_file:reg_file_1|altsyncram:mem_rtl_0|altsyncram_jfq1:auto_generated|ALTSYNCRAM                               ; AUTO ; True Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None        ;
++------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                    ;
++---------------------------------------------+---------------------------------------------------------+
+; Register name                               ; Reason for Removal                                      ;
++---------------------------------------------+---------------------------------------------------------+
+; program_counter:program_counter_1|PC_out[1] ; Merged with program_counter:program_counter_1|PC_out[0] ;
+; program_counter:program_counter_1|PC_out[0] ; Stuck at GND due to stuck port data_in                  ;
+; Total Number of Removed Registers = 2       ;                                                         ;
++---------------------------------------------+---------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 30    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                ;
++--------------------------------------+-------------------------------+------+
+; Register Name                        ; Megafunction                  ; Type ;
++--------------------------------------+-------------------------------+------+
+; reg_file:reg_file_1|RD_Data_1[0..31] ; reg_file:reg_file_1|mem_rtl_0 ; RAM  ;
+; reg_file:reg_file_1|RD_Data_2[0..31] ; reg_file:reg_file_1|mem_rtl_0 ; RAM  ;
++--------------------------------------+-------------------------------+------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_level_design|mux_2to1_32bit:mux_2to1_32bit_4|Y[31] ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |top_level_design|mux_2to1_32bit:mux_2to1_32bit_4|Y[26] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Source assignments for data_memory:data_memory_1|altsyncram:altsyncram_component|altsyncram_72r:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                               ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for instruction_memory:instruction_memory_1|altsyncram:altsyncram_component|altsyncram_2co:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Source assignments for reg_file:reg_file_1|altsyncram:mem_rtl_0|altsyncram_jfq1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------+
+; Assignment                      ; Value              ; From ; To                               ;
++---------------------------------+--------------------+------+----------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                ;
++---------------------------------+--------------------+------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: data_memory:data_memory_1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                       ;
++------------------------------------+----------------------+--------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                    ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                    ;
+; WIDTH_A                            ; 8                    ; Signed Integer                             ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                             ;
+; NUMWORDS_A                         ; 1                    ; Untyped                                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; WIDTH_B                            ; 1                    ; Untyped                                    ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                    ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                    ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                    ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                    ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
+; INIT_FILE                          ; dmemory.mif          ; Untyped                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                    ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                    ;
+; DEVICE_FAMILY                      ; Cyclone 10 LP        ; Untyped                                    ;
+; CBXI_PARAMETER                     ; altsyncram_72r       ; Untyped                                    ;
++------------------------------------+----------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: instruction_memory:instruction_memory_1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                     ;
++------------------------------------+----------------------+----------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                  ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                  ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                           ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                                           ;
+; NUMWORDS_A                         ; 1                    ; Untyped                                                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                  ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
+; INIT_FILE                          ; imemory.mif          ; Untyped                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                  ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                  ;
+; DEVICE_FAMILY                      ; Cyclone 10 LP        ; Untyped                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_2co       ; Untyped                                                  ;
++------------------------------------+----------------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: reg_file:reg_file_1|altsyncram:mem_rtl_0 ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT      ; Untyped                       ;
+; WIDTH_A                            ; 32                   ; Untyped                       ;
+; WIDTHAD_A                          ; 5                    ; Untyped                       ;
+; NUMWORDS_A                         ; 32                   ; Untyped                       ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 32                   ; Untyped                       ;
+; WIDTHAD_B                          ; 5                    ; Untyped                       ;
+; NUMWORDS_B                         ; 32                   ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                       ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA             ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; UNUSED               ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone 10 LP        ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_jfq1      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                    ;
++-------------------------------------------+-------------------------------------------------------------------------+
+; Name                                      ; Value                                                                   ;
++-------------------------------------------+-------------------------------------------------------------------------+
+; Number of entity instances                ; 3                                                                       ;
+; Entity Instance                           ; data_memory:data_memory_1|altsyncram:altsyncram_component               ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                             ;
+;     -- WIDTH_A                            ; 8                                                                       ;
+;     -- NUMWORDS_A                         ; 1                                                                       ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
+;     -- WIDTH_B                            ; 1                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                               ;
+; Entity Instance                           ; instruction_memory:instruction_memory_1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                     ;
+;     -- WIDTH_A                            ; 32                                                                      ;
+;     -- NUMWORDS_A                         ; 1                                                                       ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
+;     -- WIDTH_B                            ; 1                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                               ;
+; Entity Instance                           ; reg_file:reg_file_1|altsyncram:mem_rtl_0                                ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                         ;
+;     -- WIDTH_A                            ; 32                                                                      ;
+;     -- NUMWORDS_A                         ; 32                                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
+;     -- WIDTH_B                            ; 32                                                                      ;
+;     -- NUMWORDS_B                         ; 32                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                               ;
++-------------------------------------------+-------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "mux_4to1_5bit:mux_4to1_5bit_1" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; d3   ; Input ; Info     ; Stuck at GND                    ;
+; d4   ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "mux_2to1_32bit:mux_2to1_32bit_5" ;
++-----------+-------+----------+------------------------------+
+; Port      ; Type  ; Severity ; Details                      ;
++-----------+-------+----------+------------------------------+
+; d2[31..8] ; Input ; Info     ; Stuck at GND                 ;
++-----------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "mux_2to1_32bit:mux_2to1_32bit_4" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d2   ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cla_32:cla_32_2"                                                                     ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cla_32:cla_32_1"                                                                              ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; oprnd_2[31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; oprnd_2[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; oprnd_2[2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; c_in           ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c_out          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU_1|cla_32:ADDER"                                                              ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 397                         ;
+; cycloneiii_ff         ; 30                          ;
+;     plain             ; 30                          ;
+; cycloneiii_lcell_comb ; 307                         ;
+;     normal            ; 307                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 66                          ;
+;         4 data inputs ; 217                         ;
+; cycloneiii_ram_block  ; 72                          ;
+;                       ;                             ;
+; Max LUT depth         ; 35.00                       ;
+; Average LUT depth     ; 16.72                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Tue Nov 29 04:16:30 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level_design -c top_level_design
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file top_level_design.vhd
+    Info (12022): Found design unit 1: top_level_design-structure File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 52
+    Info (12023): Found entity 1: top_level_design File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 17
+Info (12127): Elaborating entity "top_level_design" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top_level_design.vhd(230): object "carryout1" assigned a value but never read File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 230
+Warning (10036): Verilog HDL or VHDL warning at top_level_design.vhd(231): object "carryout2" assigned a value but never read File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 231
+Warning (12125): Using design file alu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ALU-behavioral File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/alu.vhd Line: 28
+    Info (12023): Found entity 1: ALU File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/alu.vhd Line: 19
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 238
+Warning (12125): Using design file cla_32.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cla_32-behavioral File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 29
+    Info (12023): Found entity 1: cla_32 File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 19
+Info (12128): Elaborating entity "cla_32" for hierarchy "ALU:ALU_1|cla_32:ADDER" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/alu.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(41): signal "G" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(41): signal "P" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(43): signal "G" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(43): signal "P" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(43): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(45): signal "G" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(45): signal "P" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(45): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(46): signal "SUM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(47): signal "SUM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at cla_32.vhd(47): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cla_32.vhd Line: 47
+Warning (12125): Using design file bus_merger.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: bus_merger-behavioral File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/bus_merger.vhd Line: 23
+    Info (12023): Found entity 1: bus_merger File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/bus_merger.vhd Line: 15
+Info (12128): Elaborating entity "bus_merger" for hierarchy "bus_merger:bus_merger_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 246
+Warning (12125): Using design file comparator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: comparator-behavioral File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/comparator.vhd Line: 23
+    Info (12023): Found entity 1: comparator File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/comparator.vhd Line: 15
+Info (12128): Elaborating entity "comparator" for hierarchy "comparator:comparator_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 271
+Warning (12125): Using design file cu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cu-behavioral File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 34
+    Info (12023): Found entity 1: cu File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 17
+Info (12128): Elaborating entity "CU" for hierarchy "CU:cu_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 278
+Warning (10492): VHDL Process Statement warning at cu.vhd(57): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at cu.vhd(58): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at cu.vhd(59): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at cu.vhd(60): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at cu.vhd(61): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at cu.vhd(62): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 62
+Warning (10492): VHDL Process Statement warning at cu.vhd(63): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at cu.vhd(64): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at cu.vhd(65): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at cu.vhd(66): signal "OUT_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/cu.vhd Line: 66
+Warning (12125): Using design file data_memory.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: data_memory-structural File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/data_memory.vhd Line: 27
+    Info (12023): Found entity 1: data_memory File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/data_memory.vhd Line: 16
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_memory_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 294
+Info (12128): Elaborating entity "altsyncram" for hierarchy "data_memory:data_memory_1|altsyncram:altsyncram_component" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/data_memory.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "data_memory:data_memory_1|altsyncram:altsyncram_component" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/data_memory.vhd Line: 51
+Info (12133): Instantiated megafunction "data_memory:data_memory_1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/data_memory.vhd Line: 51
+    Info (12134): Parameter "init_file" = "dmemory.mif"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_72r.tdf
+    Info (12023): Found entity 1: altsyncram_72r File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/db/altsyncram_72r.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_72r" for hierarchy "data_memory:data_memory_1|altsyncram:altsyncram_component|altsyncram_72r:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (12125): Using design file instruction_memory.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: instruction_memory-structural File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 24
+    Info (12023): Found entity 1: instruction_memory File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 16
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:instruction_memory_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 304
+Info (12128): Elaborating entity "altsyncram" for hierarchy "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Info (12130): Elaborated megafunction instantiation "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Info (12133): Instantiated megafunction "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+    Info (12134): Parameter "init_file" = "imemory.mif"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2co.tdf
+    Info (12023): Found entity 1: altsyncram_2co File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/db/altsyncram_2co.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_2co" for hierarchy "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component|altsyncram_2co:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (113028): 247 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 9 warnings found, and 9 warnings are reported. File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 1 to 3 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 5 to 7 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 9 to 11 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 13 to 15 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 17 to 19 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 21 to 23 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 25 to 27 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 29 to 31 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+    Warning (113027): Addresses ranging from 33 to 255 are not initialized File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/imemory.mif Line: 1
+Warning (12125): Using design file lshift_26_28.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lshift_26_28-behavior File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/lshift_26_28.vhd Line: 26
+    Info (12023): Found entity 1: lshift_26_28 File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/lshift_26_28.vhd Line: 19
+Info (12128): Elaborating entity "lshift_26_28" for hierarchy "lshift_26_28:lshift_26_28_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 311
+Warning (12125): Using design file lshift_32_32.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lshift_32_32-behavior File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/lshift_32_32.vhd Line: 26
+    Info (12023): Found entity 1: lshift_32_32 File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/lshift_32_32.vhd Line: 19
+Info (12128): Elaborating entity "lshift_32_32" for hierarchy "lshift_32_32:lshift_32_32_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 317
+Warning (12125): Using design file mux_2to1_32bit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mux_2to1_32bit-arch File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_2to1_32bit.vhd Line: 27
+    Info (12023): Found entity 1: mux_2to1_32bit File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_2to1_32bit.vhd Line: 18
+Info (12128): Elaborating entity "mux_2to1_32bit" for hierarchy "mux_2to1_32bit:mux_2to1_32bit_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 323
+Warning (12125): Using design file mux_4to1_5bit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mux_4to1_5bit-arch File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 29
+    Info (12023): Found entity 1: mux_4to1_5bit File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 18
+Info (12128): Elaborating entity "mux_4to1_5bit" for hierarchy "mux_4to1_5bit:mux_4to1_5bit_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 363
+Warning (10631): VHDL Process Statement warning at mux_4to1_5bit.vhd(31): inferring latch(es) for signal or variable "Y", which holds its previous value in one or more paths through the process File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Info (10041): Inferred latch for "Y[0]" at mux_4to1_5bit.vhd(31) File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Info (10041): Inferred latch for "Y[1]" at mux_4to1_5bit.vhd(31) File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Info (10041): Inferred latch for "Y[2]" at mux_4to1_5bit.vhd(31) File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Info (10041): Inferred latch for "Y[3]" at mux_4to1_5bit.vhd(31) File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Info (10041): Inferred latch for "Y[4]" at mux_4to1_5bit.vhd(31) File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (12125): Using design file program_counter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: program_counter-behavior File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/program_counter.vhd Line: 27
+    Info (12023): Found entity 1: program_counter File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/program_counter.vhd Line: 19
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 373
+Warning (12125): Using design file reg_file.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: reg_file-behavior File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/reg_file.vhd Line: 32
+    Info (12023): Found entity 1: reg_file File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/reg_file.vhd Line: 19
+Info (12128): Elaborating entity "reg_file" for hierarchy "reg_file:reg_file_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 380
+Warning (10873): Using initial value X (don't care) for net "mem.raddr_a" at reg_file.vhd(34) File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/reg_file.vhd Line: 34
+Warning (10873): Using initial value X (don't care) for net "mem.raddr_b" at reg_file.vhd(34) File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/reg_file.vhd Line: 34
+Warning (12125): Using design file sign_extender.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: sign_extender-behavior File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/sign_extender.vhd Line: 26
+    Info (12023): Found entity 1: sign_extender File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/sign_extender.vhd Line: 19
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:sign_extender_1" File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 392
+Warning (12001): Port "address_a[10]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component". File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Warning (12001): Port "address_a[11]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component". File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Warning (12001): Port "address_a[12]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component". File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Warning (12001): Port "address_a[13]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component". File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Warning (12001): Port "address_a[14]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component". File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Warning (12001): Port "address_a[15]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component". File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Warning (12001): Port "address_a[8]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component". File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Warning (12001): Port "address_a[9]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "instruction_memory:instruction_memory_1|altsyncram:altsyncram_component". File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/instruction_memory.vhd Line: 47
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[0]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[1]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[2]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[3]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[4]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[0]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[1]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[2]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[3]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (14026): LATCH primitive "mux_4to1_5bit:mux_4to1_5bit_1|Y[4]" is permanently enabled File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/mux_4to1_5bit.vhd Line: 31
+Warning (276027): Inferred dual-clock RAM node "reg_file:reg_file_1|mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "reg_file:reg_file_1|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to BIDIR_DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_REG_B set to CLOCK1
+        Info (286033): Parameter WRCONTROL_WRADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_PORT_A set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "reg_file:reg_file_1|altsyncram:mem_rtl_0"
+Info (12133): Instantiated megafunction "reg_file:reg_file_1|altsyncram:mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_REG_B" = "CLOCK1"
+    Info (12134): Parameter "WRCONTROL_WRADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_PORT_A" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jfq1.tdf
+    Info (12023): Found entity 1: altsyncram_jfq1 File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/db/altsyncram_jfq1.tdf Line: 28
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "PCin_out[0]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 22
+    Warning (13410): Pin "PCin_out[1]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 22
+    Warning (13410): Pin "PCout_out[0]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 23
+    Warning (13410): Pin "PCout_out[1]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 23
+    Warning (13410): Pin "pcplus4_out[0]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 25
+    Warning (13410): Pin "pcplus4_out[1]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 25
+    Warning (13410): Pin "signRegdest_out[1]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 37
+    Warning (13410): Pin "signextend_out[16]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[17]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[18]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[19]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[20]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[21]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[22]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[23]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[24]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[25]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[26]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[27]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[28]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[29]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[30]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "signextend_out[31]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 41
+    Warning (13410): Pin "leftshift28_out[0]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 42
+    Warning (13410): Pin "leftshift28_out[1]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 42
+    Warning (13410): Pin "leftshift32_out[0]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[1]" is stuck at GND File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[18]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[19]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[20]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[21]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[22]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[23]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[24]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[25]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[26]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[27]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[28]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[29]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[30]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+    Warning (13410): Pin "leftshift32_out[31]" is stuck at VCC File: C:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_5_20221125_13220034/1_Lab/tugas_1/top_level_design.vhd Line: 43
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 804 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 395 output pins
+    Info (21061): Implemented 335 logic cells
+    Info (21064): Implemented 72 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 112 warnings
+    Info: Peak virtual memory: 4873 megabytes
+    Info: Processing ended: Tue Nov 29 04:16:41 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:20
+
+

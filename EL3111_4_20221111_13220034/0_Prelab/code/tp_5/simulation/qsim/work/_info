@@ -1,0 +1,114 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_4_20221111_13220034/0_Prelab/code/tp_5/simulation/qsim
+T_opt
+!s110 1669364885
+Vn@A2?XX@GN3bD:3KLo^7m3
+04 22 15 work bus_merger_vhd_vec_tst bus_merger_arch 1
+=1-c894029206bd-63807c94-304-9a50
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Ebus_merger
+Z1 w1669364882
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ]n^KQ6M?Rfm1B1oW9AF1K0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 866KB=;174aDa`;9S2n@?1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 OQbOI4oZi49H@@Ik@CUZV2
+!i122 0
+R0
+Z9 8bus_merger.vho
+Z10 Fbus_merger.vho
+l0
+L37 1
+VSln^ZEePGGkSIMlKNFa>93
+!s100 d3AmPL8Zi^PFiCGobjGES3
+Z11 OL;C;2021.2;73
+32
+Z12 !s110 1669364884
+!i10b 1
+Z13 !s108 1669364883.000000
+Z14 !s90 -work|work|bus_merger.vho|
+Z15 !s107 bus_merger.vho|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 10 bus_merger 0 22 Sln^ZEePGGkSIMlKNFa>93
+!i122 0
+l159
+L112 836
+VRn@4Y>=SbEf^Llcg_63MC2
+!s100 2G[46moNkAUh7YI_5PanE2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Ebus_merger_vhd_vec_tst
+Z18 w1669364879
+R6
+R7
+!i122 1
+R0
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+L32 1
+VTHYD<zQ]Pi7X<GnPRN:bg1
+!s100 EzEPoQAE]KAYb_]Lafd7N2
+R11
+32
+R12
+!i10b 1
+Z21 !s108 1669364884.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 0
+R16
+R17
+Abus_merger_arch
+R6
+R7
+DEx4 work 22 bus_merger_vhd_vec_tst 0 22 THYD<zQ]Pi7X<GnPRN:bg1
+!i122 1
+l47
+L34 6506
+VM7mjKbj1^PN]FES_5_4;U1
+!s100 ><bAf280_9V>O0Nd<3n;21
+R11
+32
+R12
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R16
+R17

@@ -1,0 +1,115 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/Ahmad Aziz/Data/Kuliah/semester 5/prak_arsikom/EL3111_4_20221111_13220034/0_Prelab/code/tp_4/simulation/qsim
+T_opt
+!s110 1669364500
+VFoRz6VoKoSTa[BACo9]o`0
+04 22 15 work comparator_vhd_vec_tst comparator_arch 1
+=1-c894029206bd-63807b13-2ea-26cc
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Ecomparator
+Z2 w1669364497
+Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z4 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ]n^KQ6M?Rfm1B1oW9AF1K0
+Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z6 DPx8 cyclonev 19 cyclonev_components 0 22 866KB=;174aDa`;9S2n@?1
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 OQbOI4oZi49H@@Ik@CUZV2
+!i122 2
+R1
+Z10 8comparator.vho
+Z11 Fcomparator.vho
+l0
+L37 1
+Vi=M?IO<Yk=ncRhm:M8;ZR1
+!s100 l>ZiiM<<NNlRZLEgbQ:B>3
+Z12 OL;C;2021.2;73
+32
+Z13 !s110 1669364499
+!i10b 1
+Z14 !s108 1669364498.000000
+Z15 !s90 -work|work|comparator.vho|
+Z16 !s107 comparator.vho|
+!i113 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 10 comparator 0 22 i=M?IO<Yk=ncRhm:M8;ZR1
+!i122 2
+l283
+L113 1276
+V?onO9;m1OT@1jD]dEG=3J2
+!s100 I6=aIQ9NhY>[_m_c2TX8F0
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Ecomparator_vhd_vec_tst
+Z19 w1669364495
+R7
+R8
+!i122 3
+R1
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
+l0
+L32 1
+VmIH0Gk3f19hA::C4@faEX1
+!s100 kjR5lWCeS=Z[>di=fkl3:1
+R12
+32
+R13
+!i10b 1
+Z22 !s108 1669364499.000000
+Z23 !s90 -work|work|Waveform.vwf.vht|
+Z24 !s107 Waveform.vwf.vht|
+!i113 0
+R17
+R18
+Acomparator_arch
+R7
+R8
+DEx4 work 22 comparator_vhd_vec_tst 0 22 mIH0Gk3f19hA::C4@faEX1
+!i122 3
+l47
+L34 6774
+V1INRPbB2cGV[5hk[eAJSJ0
+!s100 1z^gHm0;Onf8KG[53@2B52
+R12
+32
+R13
+!i10b 1
+R22
+R23
+R24
+!i113 0
+R17
+R18

@@ -1,0 +1,68 @@
+-- Praktikum EL3111 Arsitektur Sistem Komputer
+-- Modul 		: 4
+-- Percobaan 	: 6
+-- Tanggal 		: 11 November 2022
+-- Kelompok 	: 10
+-- Rombongan 	: B
+-- Nama (NIM) 1 : Ahmad Aziz (13220034)
+-- Nama (NIM) 2 : 
+-- Nama File 	: CU.vhd
+-- Deskripsi 	: Program control unit (CU)
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY cu IS
+PORT (
+	OP_In : IN STD_LOGIC_VECTOR (5 DOWNTO 0); 
+	FUNCT_In : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+	Sig_Jmp 	: OUT STD_LOGIC;
+	Sig_Bne 	: OUT STD_LOGIC; 
+	Sig_Branch 	: OUT STD_LOGIC;
+	Sig_MemtoReg: OUT STD_LOGIC; 
+	Sig_MemRead : OUT STD_LOGIC; 
+	Sig_MemWrite: OUT STD_LOGIC;
+	Sig_RegDest : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+	Sig_RegWrite: OUT STD_LOGIC; 
+	Sig_ALUSrc 	: OUT STD_LOGIC;
+	Sig_ALUCtrl : OUT STD_LOGIC
+	);
+END cu;
+
+ARCHITECTURE behavioral OF cu IS
+	SIGNAL OUT_sig : STD_LOGIC_VECTOR(10 DOWNTO 0);
+	BEGIN
+	PROCESS (OP_In, FUNCT_In) IS
+		BEGIN
+		IF OP_In = "000000" THEN
+			CASE FUNCT_In IS
+				WHEN "100000" 	=> OUT_sig <= "00000001100"; -- ADD
+				WHEN "100010" 	=> OUT_sig <= "00000001101"; -- SUB
+				WHEN OTHERS 	=> OUT_sig <= "00000000000"; -- NOP
+			END CASE;
+		ELSE 
+			CASE OP_In IS
+				WHEN "000100" 	=> OUT_sig <= "00100000000"; -- BEQ
+				WHEN "000101" 	=> OUT_sig <= "01000000010"; -- BNE
+				WHEN "001000" 	=> OUT_sig <= "00000000110"; -- ADD
+				WHEN "100011" 	=> OUT_sig <= "00011000110"; -- LW
+				WHEN "101011" 	=> OUT_sig <= "00000100010"; -- SW
+				WHEN "000010" 	=> OUT_sig <= "10000000000"; -- JMP
+				WHEN others 	=> OUT_sig <= "00000000000"; -- NOP
+			END CASE;
+		END IF;
+		
+		Sig_Jmp			<= OUT_sig(10);
+		Sig_Bne			<= OUT_sig(9);
+		Sig_Branch		<= OUT_sig(8);
+		Sig_MemtoReg	<= OUT_sig(7);
+		Sig_MemRead		<= OUT_sig(6);
+		Sig_MemWrite	<= OUT_sig(5);
+		Sig_RegDest		<= OUT_sig(4 DOWNTO 3);
+		Sig_RegWrite	<= OUT_sig(2);
+		Sig_ALUSrc		<= OUT_sig(1);
+		Sig_ALUCtrl		<= OUT_sig(0);
+	END PROCESS;
+END behavioral;

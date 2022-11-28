@@ -1,0 +1,1433 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ALU_result_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_result_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PCin_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PCout_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "pcplus4_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "rd1_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "rd2_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_15_11_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_15_11_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_15_11_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_15_11_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_15_11_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_20_16_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_20_16_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_20_16_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_20_16_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_20_16_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_25_21_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_25_21_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_25_21_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_25_21_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_25_21_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "signJump_out",
+					"strict" : false
+				},
+				{
+					"name" : "signBNE_out",
+					"strict" : false
+				},
+				{
+					"name" : "signBranch_out",
+					"strict" : false
+				},
+				{
+					"name" : "signMemToReg_out",
+					"strict" : false
+				},
+				{
+					"name" : "signMemRead_out",
+					"strict" : false
+				},
+				{
+					"name" : "signMemWrite_out",
+					"strict" : false
+				},
+				{
+					"name" : "signRegdest_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signRegwrite_out",
+					"strict" : false
+				},
+				{
+					"name" : "signALUsrc_out",
+					"strict" : false
+				},
+				{
+					"name" : "signALUctrl_out",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "signextend_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift28_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "leftshift32_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "BranchResult",
+					"strict" : false
+				},
+				{
+					"name" : "RDData_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RDData_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RDData_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RDData_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RDData_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RDData_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RDData_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RDData_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "WRData3_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_In_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_In_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_In_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_In_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_In_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_In_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FUNCT_In_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FUNCT_In_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FUNCT_In_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FUNCT_In_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FUNCT_In_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FUNCT_In_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
